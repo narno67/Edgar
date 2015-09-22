@@ -31,8 +31,23 @@ namespace Actividad5
 					},
 					new Label
 					{
-						Text = "Black",
-						TextColor = Color.Black
+						Text = "White",
+						TextColor = Color.White
+					},
+					new Label
+					{
+						Text = "Yellow",
+						TextColor = Color.Yellow
+					},
+					new Label
+					{
+						Text = "Green",
+						TextColor = Color.Green
+					},
+					new Label
+					{
+						Text = "Red",
+						TextColor = Color.Red
 					}
 				}
 			};
