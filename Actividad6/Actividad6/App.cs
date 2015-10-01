@@ -8,17 +8,19 @@ namespace Actividad6
 		public static Page GetMainPage ()
 		{	
 			Label texto = new Label {
-				Text = "texto va a cambiar",
+				Text = "texto y color van a cambiar",
 				TextColor = Color.Blue
 			};
 
 			Button boton = new Button
 			{
-				Text = "Click para cambiar el texto"
+				Text = "Click para cambiar Texto y Color"
 			};
 
 			boton.Clicked += (sender, e) => {
 				texto.Text = "haz hecho click en el botón";
+				texto.TextColor = Color.Green;
+
 			};
 
 			//Stacklayout permite apilar los controles verticalmente
@@ -26,7 +28,7 @@ namespace Actividad6
 			{
 				Children =
 				{
-					texto,
+					texto, 
 					boton
 				}
 			};
