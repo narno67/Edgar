@@ -18,29 +18,30 @@ namespace Actividad9
 
 			boton.Clicked += (sender, e) => {
 
-				if(usuario.Text.Equals("usuario")){
-					Navigation.PushAsync(new Contenido());
+				if (usuario.Text.Equals ("Login") && (clave.Text.Equals ("clave"))) {
+					Navigation.PushAsync (new Contenido ());
 				}
-			};
+				}; 
 
-			//Stacklayout permite apilar los controles verticalmente
-			StackLayout stackLayout = new StackLayout
-			{
-				Spacing = 20, 
-				Padding = 50,
-				VerticalOptions = LayoutOptions.Center,
-				Children =
+				//Stacklayout permite apilar los controles verticalmente
+				StackLayout stackLayout = new StackLayout 
 				{
-					usuario,
-					clave,
-					boton
-				}
+					Spacing = 20, 
+					Padding = 50,
+					VerticalOptions = LayoutOptions.Center,
+					Children = 
+					{
+						usuario,
+						clave,
+						boton
+					}
 				};
 
-			//Como esta clase hereda de ContentPage, podemos usar estas propiedades directamente
-			this.Content = stackLayout;
-			this.Padding = new Thickness (5, Device.OnPlatform (20, 5, 5), 5, 5);
-		}
+				//Como esta clase hereda de ContentPage, podemos usar estas propiedades directamente
+				this.Content = stackLayout;
+				this.Padding = new Thickness (5, Device.OnPlatform (20, 5, 5), 5, 5);
+			}
 	}
 }
+
 
